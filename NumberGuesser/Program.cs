@@ -12,6 +12,7 @@
             Console.WriteLine("Guess a number between 1 and 100:");
             int guess = 0;
 
+            // Loop until the number has been guessed
             while (guess != numberToGuess)
             {
                 // Read user input
@@ -19,6 +20,8 @@
 
                 // Parse user input as an integer
                 bool isValidInput = int.TryParse(input, out guess);
+
+                // If there is something wrong with user's input step over one loop incrementation
                 if (!isValidInput)
                 {
                     Console.WriteLine("Invalid input, please enter a number.");
